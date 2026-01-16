@@ -1,0 +1,221 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* ────────────────────────────────────────────────
+   Premium Academy Design System – Responsive Enhanced
+──────────────────────────────────────────────── */
+
+@layer base {
+  :root {
+    /* Core Brand Colors – same as yours */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 222 65% 33%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 168 80% 40%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 168 80% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --gold: 43 65% 52%;
+    --gold-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 65% 33%;
+
+    --radius: 0.75rem;
+
+    /* Gradients – kept same */
+    --gradient-primary: linear-gradient(135deg, hsl(222, 65%, 33%) 0%, hsl(222, 65%, 25%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(222, 65%, 20%) 0%, hsl(222, 65%, 33%) 50%, hsl(200, 60%, 35%) 100%);
+    --gradient-teal: linear-gradient(135deg, hsl(168, 80%, 40%) 0%, hsl(168, 80%, 30%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(43, 65%, 52%) 0%, hsl(43, 75%, 45%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+
+    /* Shadows – kept same */
+    --shadow-sm: 0 1px 2px 0 rgba(30, 58, 138, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(30, 58, 138, 0.1), 0 2px 4px -2px rgba(30, 58, 138, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(30, 58, 138, 0.1), 0 4px 6px -4px rgba(30, 58, 138, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(30, 58, 138, 0.1), 0 8px 10px -6px rgba(30, 58, 138, 0.1);
+    --shadow-gold: 0 4px 14px 0 rgba(212, 175, 55, 0.25);
+    --shadow-teal: 0 4px 14px 0 rgba(20, 184, 166, 0.25);
+
+    /* Typography – responsive fluid scaling added */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+
+    /* Fluid typography base sizes (using clamp for responsiveness) */
+    --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+    --text-sm: clamp(0.875rem, 0.8rem + 0.4vw, 1rem);
+    --text-base: clamp(1rem, 0.95rem + 0.5vw, 1.125rem);
+    --text-lg: clamp(1.125rem, 1.05rem + 0.75vw, 1.25rem);
+    --text-xl: clamp(1.25rem, 1.15rem + 1vw, 1.5rem);
+    --text-2xl: clamp(1.5rem, 1.35rem + 1.5vw, 2rem);
+    --text-3xl: clamp(1.875rem, 1.65rem + 2vw, 2.5rem);
+    --text-4xl: clamp(2.25rem, 1.95rem + 2.5vw, 3rem);
+    --text-5xl: clamp(3rem, 2.5rem + 3.5vw, 4rem);
+
+    /* Line heights responsive */
+    --leading-tight: 1.1;
+    --leading-normal: 1.5;
+    --leading-relaxed: 1.625;
+  }
+
+  .dark {
+    /* Your dark mode colors – kept same, only added fluid typography */
+    --background: 222 47% 8%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 168 80% 45%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 222 65% 40%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 168 80% 40%;
+    --accent-foreground: 222 47% 11%;
+    --gold: 43 65% 52%;
+    --gold-foreground: 222 47% 11%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 168 80% 45%;
+
+    /* Sidebar dark – same */
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 168 80% 45%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 222 47% 15%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 222 47% 15%;
+    --sidebar-ring: 168 80% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: var(--leading-normal);
+  }
+
+  /* Responsive headings using fluid values */
+  h1 { @apply text-4xl md:text-5xl lg:text-[var(--text-5xl)] font-bold tracking-tight; }
+  h2 { @apply text-3xl md:text-4xl lg:text-[var(--text-4xl)] font-bold tracking-tight; }
+  h3 { @apply text-2xl md:text-3xl lg:text-[var(--text-3xl)] font-semibold; }
+  h4 { @apply text-xl md:text-2xl lg:text-[var(--text-2xl)] font-semibold; }
+  h5 { @apply text-lg md:text-xl lg:text-[var(--text-xl)]; }
+  h6 { @apply text-base md:text-lg lg:text-[var(--text-lg)] font-medium; }
+
+  p, li, .prose {
+    @apply text-[var(--text-base)] leading-[var(--leading-relaxed)];
+  }
+
+  small, .text-sm {
+    @apply text-[var(--text-sm)];
+  }
+
+  .text-xs {
+    @apply text-[var(--text-xs)];
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-lg border border-white/20 shadow-lg dark:bg-black/30 dark:border-white/10;
+  }
+
+  .glass-dark {
+    @apply bg-primary/90 backdrop-blur-lg border border-white/10;
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[hsl(43,65%,52%)] to-[hsl(43,75%,45%)];
+  }
+
+  .text-gradient-teal {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[hsl(168,80%,40%)] to-[hsl(168,80%,30%)];
+  }
+
+  .section-padding {
+    @apply py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28;
+  }
+
+  .container-padding {
+    @apply px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .btn-base {
+    @apply px-5 py-2.5 sm:px-6 sm:py-3 rounded-lg font-medium transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply btn-base bg-primary text-primary-foreground hover:bg-primary/90 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply btn-base bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-md hover:shadow-lg;
+  }
+}
+
+@layer utilities {
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-20px); }
+  }
+
+  @keyframes pulse-soft {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.7; }
+  }
+
+  @keyframes shimmer {
+    0%   { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+
+  .animate-float        { animation: float 6s ease-in-out infinite; }
+  .animate-float-delayed { animation: float 6s ease-in-out infinite; animation-delay: 2s; }
+  .animate-pulse-soft   { animation: pulse-soft 3s ease-in-out infinite; }
+  .animate-shimmer      { animation: shimmer 3s linear infinite; background-size: 200% 100%; }
+
+  /* Extra responsive utilities if needed */
+  .fluid-text { font-size: clamp(1rem, 4vw, 1.25rem); }
+}
