@@ -110,9 +110,20 @@ export const Navbar = () => {
               <Phone className="w-4 h-4" />
               <span>+92 310 5372677</span>
             </a>
-            <Button variant="navPrimary" size="sm" onClick={() => handleNavClick("#contact")}>
-              Apply Now
-            </Button>
+            <Button
+  variant="navPrimary"
+  size="sm"
+  onClick={() => {
+    // Tumhara Google Form ka link yahan daal dena
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLSfljfG7am2EdE4pGAUWwLnNN2h0UimQXcpmMP1BHYE-VezqUw/viewform?usp=sharing&ouid=100366227846933291774",
+      "_blank",                // ← nayi tab mein khulega
+      "noopener,noreferrer"    // security ke liye
+    );
+  }}
+>
+  Apply Now
+</Button>
           </div>
 
           {/* Mobile Menu Button */}
