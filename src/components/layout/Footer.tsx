@@ -43,7 +43,7 @@ export const Footer = () => {
                 
                 <div className="w-12 h-12 rounded-xl  flex items-center justify-center ">
                 {/* <img src="public/favicon.jpeg" style={{borderRadius:10}}></img> */}
-                {/* <img src="public/footer-1.png" style={{borderRadius:10}}></img> */}
+                  <img src="footer-1.png" style={{borderRadius:10}}></img> 
 
                 {/* <GraduationCap className="w-7 h-7 text-secondary-foreground" /> */}
               </div>
