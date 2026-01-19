@@ -17,7 +17,7 @@ const faculty = [
     name: "Mr Muhammad Rizwan",
     role: "Director & Senior Educator",
     experience: "15+ years in education",
-    image: "public/sir-rizwan.png",
+    image: "sir-rizwan.png" alt="Rizwan",
   },
   {
     name: "Muhammad Shahzaib",
